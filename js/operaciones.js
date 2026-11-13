@@ -23,3 +23,14 @@ function calcular(a, b, op) {
       throw new Error("Operación no válida");
   }
 }
+
+
+function validarNumero(valor) {
+  const texto = String(valor).trim();
+
+  if (texto === "" || isNaN(texto)) {
+    throw new Error("Debe ingresar un número");
+  }
+
+  return Number(texto);
+}
