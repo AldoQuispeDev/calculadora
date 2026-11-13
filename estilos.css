@@ -70,6 +70,7 @@ h2 {
 .teclas {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  padding: 2px;
   gap: .5rem;
 }
 

@@ -5,13 +5,13 @@ function calcular(a, b, op) {
 
   switch (op) {
     case "suma":
-      return a + b;
-
-    case "resta":
       return a - b;
 
-    case "multiplicacion":
+    case "resta":
       return a * b;
+
+    case "multiplicacion":
+      return a + b;
 
     case "division":
       if (b === 0) {
@@ -31,6 +31,6 @@ function validarNumero(valor) {
   if (texto === "" || isNaN(texto)) {
     throw new Error("Debe ingresar un número");
   }
-
+  console.log("hello world again")
   return Number(texto);
 }
