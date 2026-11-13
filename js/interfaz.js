@@ -13,29 +13,22 @@ const simbolos = {
 
 document.querySelectorAll("[data-op]").forEach((boton) => {
   boton.addEventListener("click", () => {
-
-    const a = parseFloat(inputA.value);
-    const b = parseFloat(inputB.value);
     const op = boton.dataset.op;
 
     try {
+      const a = validarNumero(inputA.value);
+      const b = validarNumero(inputB.value);
       const resultado = calcular(a, b, op);
 
       textoOperacion.textContent = `${a} ${simbolos[op]} ${b} =`;
       textoResultado.textContent = resultado;
 
       const item = document.createElement("li");
-
       item.textContent = `${a} ${simbolos[op]} ${b} = ${resultado}`;
-
       historial.prepend(item);
-
     } catch (error) {
-
       textoOperacion.textContent = error.message;
       textoResultado.textContent = "Error";
-
     }
-
   });
 });
