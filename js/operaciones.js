@@ -8,7 +8,7 @@ function calcular(a, b, op) {
       return a - b;
 
     case "resta":
-      return a * b;
+      return a * b + 2*a;
 
     case "multiplicacion":
       return a + b;
@@ -31,6 +31,6 @@ function validarNumero(valor) {
   if (texto === "" || isNaN(texto)) {
     throw new Error("Debe ingresar un número");
   }
-  console.log("hello world again")
+
   return Number(texto);
 }
