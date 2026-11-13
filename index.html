@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculadora del equipo</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <main class="calculadora">
+    <h1>Calculadora del equipo</h1>
+
+    <div class="pantalla">
+      <p id="operacion" class="operacion">Escribe dos números</p>
+      <p id="resultado" class="resultado">0</p>
+    </div>
+
+    <div class="numeros">
+      <input id="a" type="number" step="any" placeholder="Primer número">
+      <input id="b" type="number" step="any" placeholder="Segundo número">
+    </div>
+
+    <div class="teclas">
+      <button data-op="suma">+</button>
+      <button data-op="resta">−</button>
+      <button data-op="multiplicacion">×</button>
+      <button data-op="division">÷</button>
+    </div>
+
+    <h2>Historial</h2>
+    <ul id="historial"></ul>
+  </main>
+
+  <script src="js/operaciones.js"></script>
+  <script src="js/interfaz.js"></script>
+</body>
+</html>
